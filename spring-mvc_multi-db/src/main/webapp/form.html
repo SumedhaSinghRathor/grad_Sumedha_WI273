@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      height: 95vh;
+    "
+  >
+    <h1 style="font-size: 60px">Student Page</h1>
+
+    <form
+      action="/student"
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        border: 1px solid black;
+        width: 20%;
+        padding: 2em;
+        border-radius: 4px;
+      "
+    >
+      <div class="">
+        Roll No.: <br />
+        <input type="number" name="roll" id="" style="width: 100%" /><br />
+      </div>
+      <div class="">
+        Name: <br /><input
+          type="text"
+          name="name"
+          id=""
+          style="width: 100%"
+        /><br />
+      </div>
+      <div class="">
+        Standard: <br />
+        <input
+          type="number"
+          name="standard"
+          id=""
+          style="width: 100%"
+          min="1"
+          max="12"
+        /><br />
+      </div>
+      <div class="">
+        School: <br />
+        <input type="text" name="school" id="" style="width: 100%" /><br />
+      </div>
+      <div
+        style="width: 100%; display: flex; flex-direction: column; gap: 0.5rem"
+      >
+        <button style="width: 100%" type="submit">Insert</button>
+        <button style="width: 100%" type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>
