@@ -25,14 +25,12 @@ export class Login {
     let pwd: string = event.target.elements[1].value;
     console.log('Password: ' + pwd);
 
-    let role = event.target.elements[2].value;
+    let role: string = event.target.elements[2].value;
     console.log('Role: ' + role);
-
-    console.log('----------------------------');
 
     if (uname == pwd) {
       this.us.setName(uname);
-      this.rs.setRole(event.target.elements[2].value);
+      this.rs.setRole(role);
       this.router.navigate(['students']);
     } else {
       this.router.navigate(['failure']);

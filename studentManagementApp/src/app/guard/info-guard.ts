@@ -5,7 +5,7 @@ import { inject } from '@angular/core';
 export const infoGuard: CanActivateFn = (route, state) => {
   let us: User = inject(User);
 
-  if (us.getName() == 'Guest') {
+  if (us.getName() == 'Username') {
     return false;
   } else {
     return true;

@@ -12,7 +12,7 @@ interface Student {
   providedIn: 'root',
 })
 export class Students {
-  public studentsList: Student[] = [
+  public studentLists: Student[] = [
     {
       reg_no: 1,
       name: 'Sumedha Singh Rathor',
@@ -51,15 +51,10 @@ export class Students {
   ];
 
   public setStudent(student: Student) {
-    this.studentsList.push(student);
+    this.studentLists.push(student);
   }
 
-  public getStudent(): Student[] {
-    return this.studentsList;
-  }
-
-  public updateStudent(updated: any) {
-    const index = this.studentsList.findIndex((s) => s.reg_no === updated.reg_no);
-    if (index !== -1) this.studentsList[index] = updated;
+  public getStudents(): Student[] {
+    return this.studentLists;
   }
 }

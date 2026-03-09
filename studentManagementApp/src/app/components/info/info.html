@@ -1,38 +1,37 @@
 <section style="display: flex; width: 100%;">
-  <div style="width: 60%;">
-    <h2>
-      Welcome! @<span style="text-transform: lowercase">{{ us.getName() }}</span>
-    </h2>
-    <h3>
-      Role: <span style="text-transform: uppercase">{{ rs.getRole() }}</span>
-    </h3>
-    <table style="font-weight: normal; text-align: center; font-family: monospace; width: 100%;">
-      <thead>
-        <tr>
-          <th colspan="5" style="font-size: x-large;">Students</th>
-        </tr>
-        <tr>
-          <th>Registration No.</th>
-          <th>Roll No.</th>
-          <th>Name</th>
-          <th>School</th>
-          <th>Standard</th>
-          <th *ngIf="rs.getRole() == 'ADMIN'">Edit</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let student of sts.getStudent()">
-          <td>{{ student.reg_no }}</td>
-          <td>{{ student.roll_no }}</td>
-          <td>{{ student.name }}</td>
-          <td>{{ student.school }}</td>
-          <td>{{ student.standard }}</td>
-          <td *ngIf="rs.getRole() == 'ADMIN'"><i class='bx bxs-edit-alt'></i></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div *ngIf="rs.getRole() == 'ADMIN'" style="width: 40%; display: flex; justify-content: center; align-items: center">
-    <app-student-form style="width: 100%;"></app-student-form>
-  </div>
+    <div style="width: 60%;">
+        <h2>
+            Welcome! @<span style="text-transform: lowercase">{{ us.getName() }}</span>
+        </h2>
+        <h3>
+            Role: <span style="text-transform: uppercase">{{ rs.getRole() }}</span>
+        </h3>
+        <table style="font-weight: normal; text-align: center; font-family: monospace; width: 100%;">
+            <thead>
+                <tr>
+                    <th colspan="5" style="font-size: x-large;">Students</th>
+                </tr>
+                <tr>
+                    <th>Registration No.</th>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>School</th>
+                    <th>Standard</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of sts.getStudents()">
+                    <td>{{ student.reg_no }}</td>
+                    <td>{{ student.roll_no }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.school }}</td>
+                    <td>{{ student.standard }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="rs.getRole() == 'ADMIN'"
+        style="width: 40%; display: flex; justify-content: center; align-items: center">
+        <app-student-form style="width: 100%;"></app-student-form>
+    </div>
 </section>
