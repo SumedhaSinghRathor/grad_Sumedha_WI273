@@ -16,17 +16,11 @@ export class Login {
     private rs: Role,
   ) {}
 
-  abc(event: any) {
+  abc(event: any, role: string) {
     event.preventDefault();
 
     let uname: string = event.target.elements[0].value;
-    console.log('Username: ' + uname);
-
     let pwd: string = event.target.elements[1].value;
-    console.log('Password: ' + pwd);
-
-    let role: string = event.target.elements[2].value;
-    console.log('Role: ' + role);
 
     if (uname == pwd) {
       this.us.setName(uname);

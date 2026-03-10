@@ -1,0 +1,77 @@
+.form-container {
+  background-color: white;
+  width: fit-content;
+  border: 2px solid #0a1828;
+  border-radius: 10px;
+  padding: 2em;
+}
+
+h2 {
+  margin: 0;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+input[type='text'],
+input[type='password'] {
+  border: none;
+}
+
+input[type='text']:focus,
+input[type='password']:focus {
+  outline: none;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5em;
+  border-bottom: 1px solid black;
+  padding: 0.5em;
+}
+
+.role-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+.role-option {
+  cursor: pointer;
+  border: 1px solid #0a1828;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.role-option input {
+  display: none;
+}
+
+.role-option input:checked + span {
+  background-color: #0a1828;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-btn {
+  background-color: white;
+  border: none;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.submit-btn:nth-of-type(1) {
+  background-color: #0a1828;
+  color: white;
+}

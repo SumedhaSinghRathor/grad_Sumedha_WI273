@@ -1,7 +1,17 @@
-<h1 style="text-align: center; color: red;">Student Management Page</h1>
-<div style="margin-inline: auto; width: fit-content;">
-        <a href="/">WELCOME</a> | <a href="/login">LOGIN</a> | <a href="/students">STUDENTS</a>
-</div>
-<hr>
-<router-outlet></router-outlet>
-<hr>
+<section>
+        <h1> Student Management Portal</h1>
+        <div class="container">
+                <aside>
+                        <a class="links" href="/">WELCOME</a>
+                        <a class="links" href="/login">LOGIN</a>
+                        <a class="links" href="/students">STUDENTS</a>
+                </aside>
+                <div class="router">
+                        <router-outlet></router-outlet>
+                </div>
+        </div>
+        <footer>
+                <a href="https://student-management.com/" target="_blank">www.student-management.com</a>
+                <p>Made by Sumedha Singh Rathor</p>
+        </footer>
+</section>

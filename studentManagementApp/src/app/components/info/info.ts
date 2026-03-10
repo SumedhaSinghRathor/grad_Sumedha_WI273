@@ -19,6 +19,7 @@ export class Info {
   ) {}
 
   removeStudent(regNo: number) {
+    alert('Hey');
     this.sts.deleteStudent(regNo);
   }
 }

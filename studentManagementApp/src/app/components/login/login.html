@@ -1,21 +1,21 @@
-<a href="/" style="text-align: center">
-    <h2>Go Back</h2>
-</a>
-<section style="margin-inline: auto; width: fit-content; width: 20%;">
-    <h2 style="text-align: center;">LOGIN PAGE</h2>
-    <form (submit)="abc($event)">
-        Enter Username: <br /> <input type="text" style="width: 100%;" /><br /><br />
-        Enter Password: <br /> <input type="password" style="width: 100%;" /><br /> <br />
-        Role:
-        <select style="width: 100%;">
-            <option>STAFF</option>
-            <option>ADMIN</option>
-        </select>
-        <br />
-        <br />
-        <div style="display: flex; gap: 1em;">
-            <input type="submit" style="width: 100%;" value="LOGIN" />
-            <input type="reset" style="width: 100%;" value="RESET" />
+<div class="form-container">
+    <h2>LOGIN PAGE</h2>
+    <form (submit)="abc($event, role.value)">
+        <div class="input-container">
+            <i class='bx bxs-user'></i><input type="text" placeholder="Username" />
+        </div>
+        <div class="input-container">
+            <i class='bx bxs-lock-alt'></i> <input type="password" placeholder="Password" />
+        </div>
+        <div class="role-container">
+            <label for="" class="role-option"><input type="radio" name="role" value="STAFF"
+                    #role><span>STAFF</span></label>
+            <label for="" class="role-option"><input type="radio" name="role" value="ADMIN"
+                    #role><span>ADMIN</span></label>
+        </div>
+        <div class="button-container">
+            <input class="submit-btn" type="submit" value="LOGIN" />
+            <input class="submit-btn" type="reset" value="RESET" />
         </div>
     </form>
-</section>
+</div>
