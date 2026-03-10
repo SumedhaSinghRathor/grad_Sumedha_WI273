@@ -17,6 +17,7 @@
                     <th>Name</th>
                     <th>School</th>
                     <th>Standard</th>
+                    <th *ngIf="rs.getRole() == 'ADMIN'">Remove</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,6 +27,9 @@
                     <td>{{ student.name }}</td>
                     <td>{{ student.school }}</td>
                     <td>{{ student.standard }}</td>
+                    <td *ngIf="rs.getRole() == 'ADMIN'">
+                        <button class="bx bx-x" (click)="removeStudent(student.reg_no)"></button>
+                    </td>
                 </tr>
             </tbody>
         </table>

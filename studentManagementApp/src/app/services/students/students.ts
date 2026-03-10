@@ -57,4 +57,8 @@ export class Students {
   public getStudents(): Student[] {
     return this.studentLists;
   }
+
+  public deleteStudent(regNo: number): void {
+    this.studentLists = this.studentLists.filter((s) => s.reg_no !== regNo);
+  }
 }

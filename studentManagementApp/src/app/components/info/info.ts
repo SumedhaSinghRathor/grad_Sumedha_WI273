@@ -17,4 +17,8 @@ export class Info {
     public rs: Role,
     public sts: Students,
   ) {}
+
+  removeStudent(regNo: number) {
+    this.sts.deleteStudent(regNo);
+  }
 }
