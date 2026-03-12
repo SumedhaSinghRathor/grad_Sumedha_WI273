@@ -1,0 +1,39 @@
+<section>
+    <h2>Welcome @<span>{{us.getName()}}</span></h2>
+    <h3>Role: <span>{{rs.getRole()}}</span></h3>
+    <div class="manipulate">
+        <a href="/form" *ngIf="rs.getRole() == 'ADMIN'"><i class='bx bx-plus'></i> Add Student</a>
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Reg No.</th>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Percentage</th>
+                    <th>Standard</th>
+                    <th>School</th>
+                    <th *ngIf="rs.getRole() == 'ADMIN'">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let st of students" (click)="openStudent(st.regNo)">
+                    <td>{{st.regNo}}</td>
+                    <td>{{st.rollNo}}</td>
+                    <td>{{st.name}}</td>
+                    <td>{{st.gender}}</td>
+                    <td>{{st.percentage}}</td>
+                    <td>{{st.standard}}</td>
+                    <td>{{st.school}}</td>
+                    <td *ngIf="rs.getRole() == 'ADMIN'">
+                        <button (click)="$event.stopPropagation(); editStudent(st.regNo)" class="bx bx-edit"></button>
+                        <button (click)="$event.stopPropagation(); ensureDelete(st.regNo);"
+                            class='bx bxs-trash-alt'></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

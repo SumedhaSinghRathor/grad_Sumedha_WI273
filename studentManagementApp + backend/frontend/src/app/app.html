@@ -1,0 +1,22 @@
+<section class="app-container">
+  <header>
+    <button>LOGOUT</button>
+    <h1>Student Management Portal</h1>
+    <button *ngIf="checkLogin()" (click)="logout()">LOGOUT</button>
+  </header>
+  <section class="content-container">
+    <aside>
+      <a class="router-link" href="/">Welcome</a>
+      <a class="router-link" href="/login">Login</a>
+      <a class="router-link" href="/students">Students</a>
+      <a class="router-link" href="/filter">Filter</a>
+    </aside>
+    <div class="router-div">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+  <footer>
+    <a href="https://student-management.com">https://student-management.com</a>
+    <p>Made by Sumedha Singh Rathor</p>
+  </footer>
+</section>

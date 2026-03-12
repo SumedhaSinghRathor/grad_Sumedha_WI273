@@ -1,0 +1,45 @@
+<section>
+    <h2>Add Student</h2>
+    <form #stForm="ngForm" (ngSubmit)="onSubmit(stForm)">
+        <!-- Registration Number -->
+        <label class="labels" for="">Registration No:</label>
+        <input type="number" name="regNo" id="" ngModel required [(ngModel)]="student.regNo">
+
+        <!-- Roll No -->
+        <label class=" labels" for="">Roll No:</label>
+        <input type="number" name="rollNo" id="" ngModel required [(ngModel)]="student.rollNo">
+
+        <!-- Name -->
+        <label class="labels" for="">Name:</label>
+        <input type="text" name="name" id="" ngModel required [(ngModel)]="student.name">
+
+        <!-- Gender -->
+        <label class="labels" for="">Gender:</label>
+        <div class="gender-options">
+            <div class="gender-option">
+                <input type="radio" name="gender" id="Male" value="Male" ngModel [(ngModel)]="student.gender">
+                <label for="Male">Male</label>
+            </div>
+            <div class="gender-option">
+                <input type="radio" name="gender" id="Female" value="Female" ngModel [(ngModel)]="student.gender">
+                <label for="Female">Female</label>
+            </div>
+        </div>
+
+        <!-- Percentage -->
+        <label class="labels" for="">Percentage:</label>
+        <input type="number" step="0.1" min="0.1" max="100" name="percentage" id="" ngModel required
+            [(ngModel)]="student.percentage">
+
+        <!-- Standard -->
+        <label class="labels" for="">Standard:</label>
+        <input type="number" min="1" max="12" name="standard" ngModel required [(ngModel)]="student.standard">
+
+        <!-- School -->
+        <label class="labels" for="">School:</label>
+        <input type="text" name="school" id="" ngModel required [(ngModel)]="student.school">
+
+        <input type="submit" [value]="isEdit ? 'UPDATE' : 'ADD'">
+        <input type="reset" value="RESET">
+    </form>
+</section>

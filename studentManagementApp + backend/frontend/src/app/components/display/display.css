@@ -1,0 +1,69 @@
+:host {
+  display: flex;
+  flex: 1;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  padding: 1em;
+}
+
+div {
+  display: flex;
+  justify-content: end;
+  gap: 0.5em;
+}
+
+.manipulate a {
+  background-color: var(--color-dark-blue);
+  color: white;
+  border: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-inline: 4px;
+}
+
+.table-container {
+  max-height: 420px;
+  border: 1px solid black;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  overflow-x: hidden;
+  margin-top: 2px;
+}
+
+table {
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  overflow: scroll;
+}
+
+thead {
+  background-color: var(--color-dark-blue);
+  color: white;
+  position: sticky;
+  top: 0;
+  cursor: none;
+}
+
+tbody {
+  overflow: scroll;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(189, 189, 189);
+}
+
+tr:not(th tr) {
+  cursor: pointer;
+}
+
+td:nth-last-child {
+  display: flex;
+}

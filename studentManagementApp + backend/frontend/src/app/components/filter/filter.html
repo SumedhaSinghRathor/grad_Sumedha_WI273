@@ -1,0 +1,26 @@
+<section>
+    <div class="container">
+        <h3>Get strength by gender and standard</h3>
+        <div class="a1">
+            <select name="gender" id="" #gender>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <input type="number" min="1" max="12" #standard>
+            <button (click)="getStrengthByGenderAndStandard(gender.value, standard.value)">Get Value</button>
+        </div>
+        <p>There are {{strengthGS}} {{gender.value.toLowerCase()}} students in {{standard.value}} class</p>
+    </div>
+    <div class="container">
+        <h3> Get strength by standard</h3>
+        <input type="number" name="" id="" min="1" max="12" #standardOnly>
+        <button (click)="getStrengthByStandard(standardOnly.value)">Get Value</button>
+        <p>{{strengthStandard}} students</p>
+    </div>
+    <div class="container">
+        <h3>Get strength by school</h3>
+        <input type="text" name="" id="" #school>
+        <button (click)="getStrengthBySchool(school.value)">Get Value</button>
+        <p>{{strengthSchool}} students</p>
+    </div>
+</section>

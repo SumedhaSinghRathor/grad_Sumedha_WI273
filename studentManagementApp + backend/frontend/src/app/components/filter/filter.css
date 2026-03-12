@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  flex: 1;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  padding: 1em;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.container {
+  padding: 2em;
+}
+
+.a1 {
+  display: flex;
+  gap: 1em;
+}
+
+.a1 input {
+  flex-grow: 1;
+}

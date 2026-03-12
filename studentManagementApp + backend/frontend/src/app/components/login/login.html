@@ -1,0 +1,16 @@
+<section>
+    <h2>LOGIN</h2>
+    <form (submit)="abc($event)">
+        <label class="credentials" for=""><i class='bx bxs-user'></i> <input type="text" name="" id=""></label>
+        <label class="credentials" for=""><i class='bx bxs-lock-alt'></i> <input type="password" name="" id=""></label>
+        <div class="role-btns">
+            <input type="radio" name="role" id="staff" value="STAFF" checked>
+            <label class="role" for="staff">STAFF</label>
+
+            <input type="radio" name="role" id="admin" value="ADMIN">
+            <label class="role" for="admin">ADMIN</label>
+        </div>
+        <input type="submit" value="LOGIN">
+        <input type="reset" value="RESET">
+    </form>
+</section>

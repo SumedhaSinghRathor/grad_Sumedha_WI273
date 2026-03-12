@@ -1,0 +1,42 @@
+section {
+  background-color: white;
+  padding: 1em;
+  border: 2px solid var(--color-dark-blue);
+  border-radius: 10px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5em;
+}
+
+.labels {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  padding: 6px;
+  font-family: 'Manrope', sans-serif;
+  border: 1px solid var(--color-dark-blue);
+}
+
+input[type='submit'] {
+  background-color: var(--color-dark-blue);
+  color: white;
+}
+
+input:not(input[type='radio'], input[type='submit'], input[type='reset']):focus {
+  outline: 1px solid blue;
+}
+
+.gender-options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.gender-option {
+  display: flex;
+  gap: 4px;
+}
